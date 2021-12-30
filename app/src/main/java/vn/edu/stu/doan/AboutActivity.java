@@ -1,5 +1,9 @@
 package vn.edu.stu.doan;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -9,10 +13,6 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
 public class AboutActivity extends AppCompatActivity {
 
@@ -81,5 +81,4 @@ public class AboutActivity extends AppCompatActivity {
         );
         startActivity(intent);
     }
-
 }

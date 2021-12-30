@@ -15,7 +15,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import vn.edu.stu.doan.DetailsActivity;
-import vn.edu.stu.doan.adapter.lvAdapter;
 import vn.edu.stu.doan.R;
 import vn.edu.stu.doan.model.SanPham;
 
@@ -76,7 +75,7 @@ public class lvAdapter extends BaseAdapter {
                 context.startActivity(intent);
             }
         });
-//
+
         ImageView ivSP = convertView.findViewById(R.id.ivSP);
 //        ivSP.setOnClickListener(new View.OnClickListener() {
 //            @Override

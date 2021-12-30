@@ -1,5 +1,9 @@
 package vn.edu.stu.doan;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+
 import android.Manifest;
 import android.content.ContentValues;
 import android.content.Intent;
@@ -18,10 +22,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
@@ -68,7 +68,7 @@ public class AddProductActivity extends AppCompatActivity {
 
                 SanPham sp = new SanPham(1, ten, "phanloai", imageViewToByte(imgHinh), gia, kichthuoc);
                 ghiDuLieu(sp);
-                Toast.makeText(AddProductActivity.this, "Thêm thành công", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AddProductActivity.this, getString(R.string.toast_product_add), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -130,7 +130,7 @@ public class AddProductActivity extends AppCompatActivity {
                 intent.setType("image/*");
                 startActivityForResult(intent, REQUEST_CODE_GALLERY);
             } else{
-                Toast.makeText(getApplicationContext(), "yêu cầu cấp quyền", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), getString(R.string.toast_permission), Toast.LENGTH_LONG).show();
             }
         }
     }

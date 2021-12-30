@@ -1,5 +1,9 @@
 package vn.edu.stu.doan;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+
 import android.Manifest;
 import android.content.ContentValues;
 import android.content.Intent;
@@ -19,10 +23,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -30,6 +30,7 @@ import java.io.InputStream;
 import vn.edu.stu.doan.model.SanPham;
 
 public class DetailsActivity extends AppCompatActivity {
+
     EditText edtTenChiTiet, edtGiaChiTiet, edtKichThuocChiTiet, edtPhanLoaiChiTiet;
     ImageView imgHinhChiTiet;
     Button btnThemHinhChiTiet, btnCapNhat;
@@ -148,7 +149,7 @@ public class DetailsActivity extends AppCompatActivity {
                 intent.setType("image/*");
                 startActivityForResult(intent, REQUEST_CODE_GALLERY);
             } else {
-                Toast.makeText(getApplicationContext(), "yêu cầu cấp quyền", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), getString(R.string.toast_permission), Toast.LENGTH_LONG).show();
             }
         }
     }

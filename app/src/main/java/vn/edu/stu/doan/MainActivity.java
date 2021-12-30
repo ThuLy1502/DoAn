@@ -37,14 +37,14 @@ public class MainActivity extends AppCompatActivity {
                     } else {
                         Toast.makeText(
                                 MainActivity.this,
-                                "Sai tên tài khẩu. Vui lòng nhập lại",
+                                "Sai mật khẩu. Vui lòng nhập lại",
                                 Toast.LENGTH_SHORT
                         ).show();
                     }
                 } else {
                     Toast.makeText(
                             MainActivity.this,
-                            "Sai tên tài khẩu. Vui lòng nhập lại",
+                            "Sai tên tài khoản. Vui lòng nhập lại",
                             Toast.LENGTH_SHORT
                     ).show();
                 }

@@ -53,6 +53,13 @@ public class HomePageActivity extends AppCompatActivity {
 //                );
 //                startActivity(intent3);
 //                break;
+                case R.id.bando:
+                Intent intent4 = new Intent(
+                        HomePageActivity.this,
+                        BanDoActivity.class
+                );
+                startActivity(intent4);
+                break;
             case R.id.exit:
                 finishAffinity();
                 System.exit(0);
